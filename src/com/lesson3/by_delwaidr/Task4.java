@@ -14,16 +14,10 @@ public class Task4 {
         if (scn.hasNextInt()) {
             a = scn.nextInt();
             System.out.println("Введите число b");
-
-
-        } else {
-            System.out.println("Вы ввели не целое число");
-        }
-        if (scn.hasNextInt()) {
             b = scn.nextInt();
         } else {
             System.out.println("Вы ввели не целое число");
-
+            System.exit(0);
         }
         System.out.println("Сумма равна: " + (a + b));
 
