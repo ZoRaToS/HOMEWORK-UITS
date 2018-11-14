@@ -5,15 +5,18 @@ import java.util.Scanner;
 public class Factorial {
 
     public static void main(String[] args) {
-        int n;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите целое число: ");
-        if (scanner.hasNextInt()) {
-            n = scanner.nextInt();
-            System.out.println("Факториал введенного вами числа: " + fatorial(n));
-        } else {
-            System.out.println("Вы ввели не целое число");
+        System.out.println("Введите целое число: ");
+        int n = getNextIntegerNumber(scanner);
+        System.out.println("Факториал числа " + n + " равен: " + fatorial(n));
+    }
+
+    private static int getNextIntegerNumber(Scanner scanner) {
+        while (!scanner.hasNextInt()) {
+            System.out.println("Ошибка! Вы ввели не целое число. Повторите пожалуйста ввод:");
+            scanner.next();
         }
+        return scanner.nextInt();
     }
 
     public static int fatorial(int n) {
