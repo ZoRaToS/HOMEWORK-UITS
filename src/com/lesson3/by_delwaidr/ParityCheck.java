@@ -11,7 +11,7 @@ public class ParityCheck {
         int a;
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите число с клавиатуры: ");
-        if (scanner.hasNextInt()) {
+        if (scanner.hasNextInt()) {//проверка на введение числа
             a = scanner.nextInt();
             if ((a & 1) == 0) {
                 System.out.println("Вы ввели четное число!");
